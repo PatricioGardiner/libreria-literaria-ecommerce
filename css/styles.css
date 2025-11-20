@@ -1,0 +1,192 @@
+/* Estilos base */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  background-image: url("../img/biblioteca.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Verde en títulos principales */
+h1,
+h2,
+h3 {
+  color: #4caf50;
+  /* verde vibrante */
+}
+
+/* Encabezado y pie */
+header,
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Navegación */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 0.5rem 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  border-bottom: 2px solid #4caf50;
+  /* subrayado verde al pasar el mouse */
+}
+
+/* Cards de productos */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  border: 2px solid #4caf50;
+  /* borde verde en cada card */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Reseñas */
+.grid-reseñas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.grid-reseñas div {
+  background-color: rgba(76, 175, 80, 0.2);
+  /* verde translúcido */
+  padding: 1rem;
+  border-radius: 6px;
+  color: #fff;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: auto;
+  width: 100%;
+}
+
+/* Campos de entrada */
+input,
+textarea {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid #4caf50;
+  /* borde verde al escribir */
+}
+
+/* Botón */
+button {
+  padding: 0.5rem;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #45a049;
+  /* verde más oscuro al pasar el mouse */
+}
+
+/* Responsive: móviles */
+@media (max-width: 600px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  header,
+  footer {
+    padding: 0.5rem;
+  }
+
+  body {
+    background-attachment: scroll;
+    /* mejora en móviles */
+  }
+}
+
+/* Responsive: tablets */
+@media (max-width: 900px) {
+  .card {
+    max-width: 300px;
+  }
+
+  .grid-reseñas {
+    grid-template-columns: 1fr;
+  }
+}

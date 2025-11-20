@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "titulo": "El Principito",
+    "precio": 15000,
+    "imagen": "img/el-principito.jpg"
+  },
+  {
+    "id": 2,
+    "titulo": "1984",
+    "precio": 20000,
+    "imagen": "img/1984.jpg"
+  },
+  {
+    "id": 3,
+    "titulo": "Don Quijote de la Mancha",
+    "precio": 18000,
+    "imagen": "img/don-quijote.jpg"
+  }
+]

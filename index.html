@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Librería Literaria | E-commerce de libros</title>
+    <meta
+      name="description"
+      content="E-commerce de una librería con catálogo dinámico, carrito de compras y formulario de contacto."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">  
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="bg-dark text-white">
+      <nav class="navbar navbar-expand-lg navbar-dark container">
+        <a class="navbar-brand fw-bold" href="index.html">Librería Literaria</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMain"
+          aria-controls="navMain"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#productos">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/carrito.html"
+                >Carrito
+                <span id="cart-count" class="badge bg-warning text-dark"
+                  >0</span
+                ></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <section class="hero d-flex align-items-center text-white">
+        <div class="container text-center">
+          <h1 class="display-5 fw-bold">Clásicos que te acompañan siempre</h1>
+          <p class="lead">
+            Catálogo dinámico, carrito persistente y una experiencia pensada
+            para vos.
+          </p>
+          <a href="#productos" class="btn btn-warning btn-lg">Ver productos</a>
+        </div>
+      </section>
+
+      <section id="productos" class="container py-5">
+        <h2 class="mb-4">Libros en Venta</h2>
+        <div
+          id="product-list"
+          class="d-flex flex-wrap gap-4 justify-content-center"
+        >
+          <!-- Las tarjetas se renderizan dinámicamente con JS -->
+        </div>
+      </section>
+
+      <section id="reseñas" class="container py-5">
+        <h2 class="mb-4">Reseñas</h2>
+        <div class="reseñas-grid">
+  <article class="p-3 bg-light rounded">
+    <h3 class="h6">El Principito</h3>
+    <p>“Una historia que te recuerda lo esencial e invisible.”</p>
+  </article>
+  <article class="p-3 bg-light rounded">
+    <h3 class="h6">1984</h3>
+    <p>“Brillante y perturbadora. Te hace pensar en la libertad.”</p>
+  </article>
+  <article class="p-3 bg-light rounded">
+    <h3 class="h6">Don Quijote</h3>
+    <p>“Una aventura que mezcla humor y profundidad.”</p>
+  </article>
+</div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white mt-5">
+      <div
+        class="container py-4 d-flex flex-column flex-md-row justify-content-between align-items-center"
+      >
+        <p class="mb-2 mb-md-0">© 2025 Librería Literaria</p>
+        <a class="text-warning" href="pages/contacto.html"
+          >¿Necesitás ayuda? Contactanos</a
+        >
+      </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+.reseñas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
